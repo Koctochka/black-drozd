@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Форма входа</title>
+    <title>Форма регистрации</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,8 +12,12 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 class="text-2xl font-bold mb-6 text-center">Вход</h2>
-        <form id="loginForm">
+        <h2 class="text-2xl font-bold mb-6 text-center">Регистрация</h2>
+        <form id="registerForm">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium mb-2">Имя</label>
+                <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Введите ваше имя" required>
+            </div>
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-medium mb-2">Электронная почта</label>
                 <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Введите вашу электронную почту" required>
@@ -22,38 +26,32 @@
                 <label for="password" class="block text-gray-700 font-medium mb-2">Пароль</label>
                 <input type="password" id="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Введите ваш пароль" required>
             </div>
-            <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center">
-                    <input type="checkbox" id="remember" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                    <label for="remember" class="ml-2 block text-gray-900">Запомнить меня</label>
-                </div>
-                <a href="#" class="text-blue-600 hover:underline">Забыли пароль?</a>
-            </div>
-            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Войти</button>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Зарегистрироваться</button>
         </form>
-        <p class="mt-6 text-center text-gray-600">Нет аккаунта? <a href="#" class="text-blue-600 hover:underline">Зарегистрироваться</a></p>
+        <p class="mt-6 text-center text-gray-600">Уже есть аккаунт? <a href="#" class="text-blue-600 hover:underline">Войти</a></p>
     </div>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
+            const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            fetch('https://your-database-api-endpoint.com/login', {
+            fetch('https://your-database-api-endpoint.com/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ email: email, password: password })
+                body: JSON.stringify({ name: name, email: email, password: password })
             })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    alert('Login successful!');
+                    alert('Registration successful!');
                 } else {
-                    alert('Login failed: ' + data.message);
+                    alert('Registration failed: ' + data.message);
                 }
             })
             .catch(error => {
