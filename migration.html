@@ -29,6 +29,38 @@
       Орнитологические исследования
      </h1>
     </a>
+    <nav>
+      <ul class="flex space-x-4">
+       <li>
+        <a class="hover:underline" href="index.html">
+         Главная
+        </a>
+       </li>
+       <li>
+        <a class="hover:underline" onclick="alert('black drozd')" href="">
+         О нас
+        </a>
+       </li>
+       <li>
+        <a class="hover:underline" href="login.html">
+          Войти
+        </a>
+       </li>
+       <li>
+          <div class="modal-container hover:underline">
+             <input id="modal-toggle" type="checkbox">
+             <label class="modal-btn-top" for="modal-toggle">Контакты</label> 
+             <label class="modal-backdrop" for="modal-toggle"></label>
+             <div class="modal-content">
+                 <label class="modal-close" for="modal-toggle">&#x2715;</label>
+                 <h2>Контактные данные:</h2><hr />
+                 <p>+79004308799</p> 
+                 <label class="modal-content-btn" for="modal-toggle">OK</label>   
+             </div>          
+         </div>
+       </li>
+      </ul>
+     </nav>
    </div>
   </header> 
   <div class="bg-white shadow-lg rounded-lg overflow-hidden flex w-full mx-auto p-16">
