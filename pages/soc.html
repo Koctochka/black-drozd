@@ -1,0 +1,89 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Социальное поведение
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100 flex items-center">
+ <main>
+ <header class="bg-green-700 text-white p-4 w-full">
+   <div class="container mx-auto flex justify-between items-center">
+    <a class="flex items-center space-x-2" href="index.html">
+     <img alt="Logo of Ornithological Research, depicting a stylized bird in flight" class="h-15 w-15" height="52" src="drozd.png" width="52"/>
+     <h1 class="text-2xl font-bold">
+      Орнитологические исследования
+     </h1>
+    </a>
+    <nav>
+      <ul class="flex space-x-4">
+       <li>
+        <a class="hover:underline" href="index.html">
+         Главная
+        </a>
+       </li>
+       <li>
+        <a class="hover:underline" onclick="alert('black drozd')" href="">
+         О нас
+        </a>
+       </li>
+       <li>
+        <a class="hover:underline" href="login.html">
+          Войти
+        </a>
+       </li>
+       <li>
+          <div class="modal-container hover:underline">
+             <input id="modal-toggle" type="checkbox">
+             <label class="modal-btn-top" for="modal-toggle">Контакты</label> 
+             <label class="modal-backdrop" for="modal-toggle"></label>
+             <div class="modal-content">
+                 <label class="modal-close" for="modal-toggle">&#x2715;</label>
+                 <h2>Контактные данные:</h2><hr />
+                 <p>+79004308799</p> 
+                 <label class="modal-content-btn" for="modal-toggle">OK</label>   
+             </div>          
+         </div>
+       </li>
+      </ul>
+     </nav>
+   </div>
+  </header> 
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden flex w-full mx-auto p-16">
+   <div class="p-8">
+    <img alt="Placeholder image of a scenic landscape with mountains and a lake" class="w-15 h-15 object-cover rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/DAflQWyCxMTQPCBNuSWJEiqYPovkMhGbxHmHwKRfuN2PXEzTA.jpg" width="600"/>
+   </div>
+   <div class="w-1/2 p-8 flex items-center justify-center">
+    <div class="ml-8">
+     <h1 class="text-2xl font-bold mb-4">
+      Социальное поведение
+     </h1>
+     <p class="text-gray-700 mb-4">
+      Социальное поведение птиц — это сложный и разнообразный аспект их жизни, который включает в себя взаимодействия между особями, формирование социальных структур и использование различных форм коммуникации. Птицы могут проявлять как индивидуальное, так и коллективное поведение, что зависит от вида, окружающей среды и конкретных обстоятельств.
+     </p>
+     <p class="text-gray-700 mb-4">
+      Одним из наиболее заметных проявлений социального поведения является формирование стай. Многие виды птиц, такие как воробьи, грачи и ласточки, образуют группы для совместного поиска пищи, защиты от хищников и миграции. Стаи могут варьироваться по размеру, от небольших групп до огромных скоплений, насчитывающих тысячи особей. В таких группах птицы могут использовать различные стратегии, чтобы повысить шансы на выживание. Например, находясь в стае, птицы могут легче обнаруживать хищников и защищаться от них. Кроме того, стая может улучшить эффективность поиска пищи, так как большее количество глаз способно заметить источники корма.
+     </p>
+     <p class="text-gray-700 mb-4">
+      Коммуникация играет важную роль в социальном поведении птиц. Птицы используют различные звуки, жесты и визуальные сигналы для обмена информацией. Пение — одна из наиболее известных форм коммуникации, которая используется как для привлечения партнера в период размножения, так и для обозначения территории. Многие виды обладают сложными вокализациями, которые могут передавать информацию о наличии пищи, опасности или состоянии здоровья. Например, некоторые птицы могут использовать специфические сигналы, чтобы предупредить других о приближающемся хищнике.
+     </p>
+    </div>
+   </div>
+  </div>
+ </main>
+ </body>
+</html>

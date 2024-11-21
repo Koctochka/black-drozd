@@ -1,0 +1,89 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Миграция
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100 flex items-center">
+ <main>
+ <header class="bg-green-700 text-white p-4 w-full">
+   <div class="container mx-auto flex justify-between items-center">
+    <a class="flex items-center space-x-2" href="index.html">
+     <img alt="Logo of Ornithological Research, depicting a stylized bird in flight" class="h-15 w-15" height="52" src="drozd.png" width="52"/>
+     <h1 class="text-2xl font-bold">
+      Орнитологические исследования
+     </h1>
+    </a>
+    <nav>
+      <ul class="flex space-x-4">
+       <li>
+        <a class="hover:underline" href="index.html">
+         Главная
+        </a>
+       </li>
+       <li>
+        <a class="hover:underline" onclick="alert('black drozd')" href="">
+         О нас
+        </a>
+       </li>
+       <li>
+        <a class="hover:underline" href="login.html">
+          Войти
+        </a>
+       </li>
+       <li>
+          <div class="modal-container hover:underline">
+             <input id="modal-toggle" type="checkbox">
+             <label class="modal-btn-top" for="modal-toggle">Контакты</label> 
+             <label class="modal-backdrop" for="modal-toggle"></label>
+             <div class="modal-content">
+                 <label class="modal-close" for="modal-toggle">&#x2715;</label>
+                 <h2>Контактные данные:</h2><hr />
+                 <p>+79004308799</p> 
+                 <label class="modal-content-btn" for="modal-toggle">OK</label>   
+             </div>          
+         </div>
+       </li>
+      </ul>
+     </nav>
+   </div>
+  </header> 
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden flex w-full mx-auto p-16">
+   <div class="p-8">
+    <img alt="Placeholder image of a scenic landscape with mountains and a lake" class="w-15 h-15 object-cover rounded-lg" height="300" src="https://storage.googleapis.com/a1aa/image/DAflQWyCxMTQPCBNuSWJEiqYPovkMhGbxHmHwKRfuN2PXEzTA.jpg" width="600"/>
+   </div>
+   <div class="w-1/2 p-8 flex items-center justify-center">
+    <div class="ml-8">
+     <h1 class="text-2xl font-bold mb-4">
+      Миграция 
+     </h1>
+     <p class="text-gray-700 mb-4">
+      Миграция птиц — это удивительное явление, представляющее собой сезонное перемещение этих животных между различными местами обитания. Это явление обусловлено множеством факторов, включая изменение климатических условий, доступность пищи и необходимость размножения. Обычно миграция делится на весенние и осенние этапы: весной птицы перемещаются к местам гнездования, а осенью — обратно к зимовкам.
+     </p>
+     <p class="text-gray-700 mb-4">
+      Одной из основных причин миграции является изменение климатических условий. С наступлением холодов многие птицы покидают свои места обитания в поисках более теплых регионов, где условия для жизни и размножения более благоприятные. Например, такие виды, как ласточки и журавли, мигрируют на большие расстояния, чтобы избежать зимних холодов и найти достаточное количество пищи. Доступность корма также играет важную роль в миграции. Сезонные изменения, такие как исчезновение насекомых или замерзание водоемов, могут вынуждать птиц перемещаться в поисках пищи. Кроме того, размножение является важным фактором, поскольку многие виды возвращаются в места, где они гнездились ранее, чтобы воспитать потомство в условиях, подходящих для его выживания.
+     </p>
+     <p class="text-gray-700 mb-4">
+      Существует несколько типов миграции. Перелетные птицы совершают регулярные сезонные перемещения между местами гнездования и зимовки. Кочующие птицы, в отличие от них, не имеют четко определенных маршрутов и перемещаются в поисках пищи, часто на короткие расстояния. Оседлые птицы остаются на одном месте круглый год, особенно в тропических и субтропических регионах, где климатические условия стабильны.
+     </p>
+    </div>
+   </div>
+  </div>
+ </main>
+ </body>
+</html>
